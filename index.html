@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Buy $250 Gift Card</title>
+  <style>
+    /* Basic Reset */
+    body, h1, h2, h3, p, ul, li, a, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #0078d4, #00bcd4);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Header Section */
+    .header {
+      position: relative;
+    }
+
+    .menu-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .menu-btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .gift-img {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      animation: bounce 1.5s infinite;
+    }
+
+    /* Claim Button */
+    .claim-btn {
+      display: inline-block;
+      background: #ff5722;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 0;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Offer Details */
+    .details {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Pop-up Notification */
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff5722;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeInOut 5s infinite;
+    }
+
+    /* Animations */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .gift-img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Container -->
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <button class="menu-btn">
+        <a href="https://optilinklock.com/1759553">☰</a>
+      </button>
+    </div>
+
+    <!-- Gift Card Image -->
+    <img src="https://i.ibb.co/Jx3w9Z3/0cd19119812f.jpg" alt="Best Buy $250 Gift Card" class="gift-img">
+
+    <!-- Claim Button -->
+    <a href="https://optilinklock.com/1759553" class="claim-btn">Claim Now</a>
+
+    <!-- Offer Details -->
+    <div class="details">
+      <p>🎁 Get your $250 Best Buy Gift Card now! Limited stock available. Hurry up and claim it before time runs out!</p>
+      <p>🔒 100% safe and secure.</p>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown" id="countdown">Offer ends in: 00:00:00</div>
+  </div>
+
+  <!-- Pop-up Notification -->
+  <div class="popup">🎉 4578 people already claimed this offer!</div>
+
+  <script>
+    // Countdown Timer Script
+    const countdown = document.getElementById('countdown');
+    const targetTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetTime - now;
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerText = `Offer ends in: ${hours}:${minutes}:${seconds}`;
+
+      if (distance < 0) {
+        countdown.innerText = "Offer expired!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
